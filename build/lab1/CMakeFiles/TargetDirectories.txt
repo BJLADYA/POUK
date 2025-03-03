@@ -1,0 +1,11 @@
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/uninstall.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/lab1_uninstall.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/talker.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/listener.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/test.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/edit_cache.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/rebuild_cache.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/list_install_components.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/install.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/install/local.dir
+/home/vlad/noetic_ws/build/lab1/CMakeFiles/install/strip.dir

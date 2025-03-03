@@ -1,0 +1,144 @@
+[0.000000] (-) TimerEvent: {}
+[0.000158] (lab1) JobQueued: {'identifier': 'lab1', 'dependencies': OrderedDict()}
+[0.000183] (lab1) JobStarted: {'identifier': 'lab1'}
+[0.008031] (lab1) JobProgress: {'identifier': 'lab1', 'progress': 'cmake'}
+[0.008266] (lab1) Command: {'cmd': ['/usr/bin/cmake', '/home/vlad/noetic_ws/src/lab1', '-DCMAKE_INSTALL_PREFIX=/home/vlad/noetic_ws/install/lab1'], 'cwd': '/home/vlad/noetic_ws/build/lab1', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vlad'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlad'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/vlad/noetic_ws/src'), ('TERM_PROGRAM_VERSION', '1.97.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1173'), ('SYSTEMD_EXEC_PID', '1759'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '14505'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vlad'), ('JOURNAL_STREAM', '8:12928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/vlad/.local/bin:/opt/ros/humble/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vlad/.local/bin:/home/vlad/.local/bin'), ('SESSION_MANAGER', 'local/VLAD-THUNDEROBOT:@/tmp/.ICE-unix/1723,unix/VLAD-THUNDEROBOT:/tmp/.ICE-unix/1723'), ('INVOCATION_ID', '38d2dd9de656428abb47a5fa69963df1'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7fef184407.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '228'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/noetic_ws/build/lab1'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099718] (-) TimerEvent: {}
+[0.198576] (lab1) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199871] (-) TimerEvent: {}
+[0.290028] (lab1) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.300045] (-) TimerEvent: {}
+[0.300711] (lab1) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.393510] (lab1) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.400246] (-) TimerEvent: {}
+[0.401575] (lab1) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.403169] (lab1) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.403863] (lab1) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.408274] (lab1) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500432] (-) TimerEvent: {}
+[0.525033] (lab1) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.530875] (lab1) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.531071] (lab1) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.531507] (lab1) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.537007] (lab1) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600539] (-) TimerEvent: {}
+[0.683431] (lab1) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700642] (-) TimerEvent: {}
+[0.768984] (lab1) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.800819] (-) TimerEvent: {}
+[0.807424] (lab1) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.811426] (lab1) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.818848] (lab1) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.829809] (lab1) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.842667] (lab1) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.879492] (lab1) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.881833] (lab1) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.900987] (-) TimerEvent: {}
+[0.902260] (lab1) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.909142] (lab1) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.989130] (lab1) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.989375] (lab1) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.001216] (-) TimerEvent: {}
+[1.072456] (lab1) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.073381] (lab1) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.101270] (-) TimerEvent: {}
+[1.114549] (lab1) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.170372] (lab1) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.170546] (lab1) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.170632] (lab1) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.170899] (lab1) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.171610] (lab1) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.171745] (lab1) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.171872] (lab1) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.172927] (lab1) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.178949] (lab1) StdoutLine: {'line': b'-- Generating done\n'}
+[1.181584] (lab1) StdoutLine: {'line': b'-- Build files have been written to: /home/vlad/noetic_ws/build/lab1\n'}
+[1.185941] (lab1) CommandEnded: {'returncode': 0}
+[1.186476] (lab1) JobProgress: {'identifier': 'lab1', 'progress': 'build'}
+[1.187071] (lab1) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vlad/noetic_ws/build/lab1', '--', '-j16', '-l16'], 'cwd': '/home/vlad/noetic_ws/build/lab1', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vlad'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlad'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/vlad/noetic_ws/src'), ('TERM_PROGRAM_VERSION', '1.97.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1173'), ('SYSTEMD_EXEC_PID', '1759'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '14505'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vlad'), ('JOURNAL_STREAM', '8:12928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/vlad/.local/bin:/opt/ros/humble/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vlad/.local/bin:/home/vlad/.local/bin'), ('SESSION_MANAGER', 'local/VLAD-THUNDEROBOT:@/tmp/.ICE-unix/1723,unix/VLAD-THUNDEROBOT:/tmp/.ICE-unix/1723'), ('INVOCATION_ID', '38d2dd9de656428abb47a5fa69963df1'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7fef184407.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '228'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/noetic_ws/build/lab1'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.201363] (-) TimerEvent: {}
+[1.248294] (lab1) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/talker_node.cpp.o\x1b[0m\n'}
+[1.249829] (lab1) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/listener_node.cpp.o\x1b[0m\n'}
+[1.301567] (-) TimerEvent: {}
+[1.401934] (-) TimerEvent: {}
+[1.502328] (-) TimerEvent: {}
+[1.602731] (-) TimerEvent: {}
+[1.703153] (-) TimerEvent: {}
+[1.803494] (-) TimerEvent: {}
+[1.903901] (-) TimerEvent: {}
+[2.004313] (-) TimerEvent: {}
+[2.104708] (-) TimerEvent: {}
+[2.205128] (-) TimerEvent: {}
+[2.305534] (-) TimerEvent: {}
+[2.405884] (-) TimerEvent: {}
+[2.506299] (-) TimerEvent: {}
+[2.606732] (-) TimerEvent: {}
+[2.707171] (-) TimerEvent: {}
+[2.807576] (-) TimerEvent: {}
+[2.907997] (-) TimerEvent: {}
+[3.008429] (-) TimerEvent: {}
+[3.108838] (-) TimerEvent: {}
+[3.209251] (-) TimerEvent: {}
+[3.309665] (-) TimerEvent: {}
+[3.410064] (-) TimerEvent: {}
+[3.510465] (-) TimerEvent: {}
+[3.610865] (-) TimerEvent: {}
+[3.711275] (-) TimerEvent: {}
+[3.811669] (-) TimerEvent: {}
+[3.911991] (-) TimerEvent: {}
+[3.926439] (lab1) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[4.012224] (-) TimerEvent: {}
+[4.064060] (lab1) StdoutLine: {'line': b'[ 75%] Built target talker\n'}
+[4.112449] (-) TimerEvent: {}
+[4.212848] (-) TimerEvent: {}
+[4.313274] (-) TimerEvent: {}
+[4.413661] (-) TimerEvent: {}
+[4.514048] (-) TimerEvent: {}
+[4.614456] (-) TimerEvent: {}
+[4.714797] (-) TimerEvent: {}
+[4.815207] (-) TimerEvent: {}
+[4.915599] (-) TimerEvent: {}
+[5.016000] (-) TimerEvent: {}
+[5.116399] (-) TimerEvent: {}
+[5.216809] (-) TimerEvent: {}
+[5.317217] (-) TimerEvent: {}
+[5.417610] (-) TimerEvent: {}
+[5.518018] (-) TimerEvent: {}
+[5.618456] (-) TimerEvent: {}
+[5.718866] (-) TimerEvent: {}
+[5.819163] (-) TimerEvent: {}
+[5.919553] (-) TimerEvent: {}
+[6.019944] (-) TimerEvent: {}
+[6.120292] (-) TimerEvent: {}
+[6.220633] (-) TimerEvent: {}
+[6.278428] (lab1) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[6.320853] (-) TimerEvent: {}
+[6.421178] (-) TimerEvent: {}
+[6.521244] (lab1) StdoutLine: {'line': b'[100%] Built target listener\n'}
+[6.521446] (-) TimerEvent: {}
+[6.532360] (lab1) CommandEnded: {'returncode': 0}
+[6.533266] (lab1) JobProgress: {'identifier': 'lab1', 'progress': 'install'}
+[6.541924] (lab1) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vlad/noetic_ws/build/lab1'], 'cwd': '/home/vlad/noetic_ws/build/lab1', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vlad'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vlad'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/vlad/noetic_ws/src'), ('TERM_PROGRAM_VERSION', '1.97.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1173'), ('SYSTEMD_EXEC_PID', '1759'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '14505'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vlad'), ('JOURNAL_STREAM', '8:12928'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/vlad/.local/bin:/opt/ros/humble/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vlad/.local/bin:/home/vlad/.local/bin'), ('SESSION_MANAGER', 'local/VLAD-THUNDEROBOT:@/tmp/.ICE-unix/1723,unix/VLAD-THUNDEROBOT:/tmp/.ICE-unix/1723'), ('INVOCATION_ID', '38d2dd9de656428abb47a5fa69963df1'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7fef184407.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '228'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/noetic_ws/build/lab1'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.551467] (lab1) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.551591] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/lib/lab1/talker\n'}
+[6.552359] (lab1) StdoutLine: {'line': b'-- Set runtime path of "/home/vlad/noetic_ws/install/lab1/lib/lab1/talker" to ""\n'}
+[6.552412] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/lib/lab1/listener\n'}
+[6.554317] (lab1) StdoutLine: {'line': b'-- Set runtime path of "/home/vlad/noetic_ws/install/lab1/lib/lab1/listener" to ""\n'}
+[6.554362] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/ament_index/resource_index/package_run_dependencies/lab1\n'}
+[6.554470] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/ament_index/resource_index/parent_prefix_path/lab1\n'}
+[6.554578] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/environment/ament_prefix_path.sh\n'}
+[6.554615] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/environment/ament_prefix_path.dsv\n'}
+[6.554700] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/environment/path.sh\n'}
+[6.554737] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/environment/path.dsv\n'}
+[6.554770] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/local_setup.bash\n'}
+[6.554826] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/local_setup.sh\n'}
+[6.554862] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/local_setup.zsh\n'}
+[6.554895] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/local_setup.dsv\n'}
+[6.554928] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/package.dsv\n'}
+[6.554980] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/ament_index/resource_index/packages/lab1\n'}
+[6.555016] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/cmake/lab1Config.cmake\n'}
+[6.555049] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/cmake/lab1Config-version.cmake\n'}
+[6.555095] (lab1) StdoutLine: {'line': b'-- Installing: /home/vlad/noetic_ws/install/lab1/share/lab1/package.xml\n'}
+[6.556274] (lab1) CommandEnded: {'returncode': 0}
+[6.574982] (lab1) JobEnded: {'identifier': 'lab1', 'rc': 0}
+[6.575650] (-) EventReactorShutdown: {}
