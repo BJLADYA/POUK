@@ -1,5 +1,5 @@
 CMakeFiles/talker.dir/src/talker_node.cpp.o: \
- /home/vlad/noetic_ws/src/lab1/src/talker_node.cpp \
+ /home/vlad/humble_pouk_ws/src/lab1/src/talker_node.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

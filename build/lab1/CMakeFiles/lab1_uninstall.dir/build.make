@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vlad/noetic_ws/src/lab1
+CMAKE_SOURCE_DIR = /home/vlad/humble_pouk_ws/src/lab1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vlad/noetic_ws/build/lab1
+CMAKE_BINARY_DIR = /home/vlad/humble_pouk_ws/build/lab1
 
 # Utility rule file for lab1_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/lab1_uninstall.dir/compiler_depend.make
 include CMakeFiles/lab1_uninstall.dir/progress.make
 
 CMakeFiles/lab1_uninstall:
-	/usr/bin/cmake -P /home/vlad/noetic_ws/build/lab1/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/vlad/humble_pouk_ws/build/lab1/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 lab1_uninstall: CMakeFiles/lab1_uninstall
 lab1_uninstall: CMakeFiles/lab1_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/lab1_uninstall.dir/clean:
 .PHONY : CMakeFiles/lab1_uninstall.dir/clean
 
 CMakeFiles/lab1_uninstall.dir/depend:
-	cd /home/vlad/noetic_ws/build/lab1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlad/noetic_ws/src/lab1 /home/vlad/noetic_ws/src/lab1 /home/vlad/noetic_ws/build/lab1 /home/vlad/noetic_ws/build/lab1 /home/vlad/noetic_ws/build/lab1/CMakeFiles/lab1_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vlad/humble_pouk_ws/build/lab1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vlad/humble_pouk_ws/src/lab1 /home/vlad/humble_pouk_ws/src/lab1 /home/vlad/humble_pouk_ws/build/lab1 /home/vlad/humble_pouk_ws/build/lab1 /home/vlad/humble_pouk_ws/build/lab1/CMakeFiles/lab1_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab1_uninstall.dir/depend
 
