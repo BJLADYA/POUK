@@ -7,23 +7,27 @@ using namespace std::chrono_literals;
 
 bool obstacle = false;
 rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub;
-rclcpp::Node::SharedPtr node; // Для доступа к логгеру в коллбэках
+rclcpp::Node::SharedPtr node;
 
 void laserCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
 {
 	RCLCPP_DEBUG(node->get_logger(), "Laser msg: %f", msg->scan_time);
 
-  const double kMinRange = 0.3;
-  //проверим нет ли вблизи робота препятствия
-  for (size_t i = 0; i<msg->ranges.size(); i++)
-  {
-      if (msg->ranges[i] < kMinRange)
-	  {
-		  obstacle = true;
-		  RCLCPP_WARN(node->get_logger(), "OBSTACLE!!!");
-		  break;
-	  }
-  }
+	obstacle = false;
+	const int fov = 90;
+	const double kMinRange = 0.5;
+
+	int dAngle = (180 - fov) / 2;
+
+	for (size_t i = dAngle; i < msg->ranges.size() - dAngle; i++)
+	{
+		if (msg->ranges[i] < kMinRange)
+		{
+			obstacle = true;
+			RCLCPP_WARN(node->get_logger(), "OBSTACLE!!!");
+			break;
+		}
+	}
 }
 
 
@@ -32,7 +36,6 @@ void laserCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
  * получении сообщения с текущем положением робота
  * параметр функции msg - ссылка на полученное сообщение
  */
-
 void poseCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
 	RCLCPP_DEBUG(node->get_logger(),
@@ -42,10 +45,7 @@ void poseCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
 		2 * atan2(msg->pose.pose.orientation.z, msg->pose.pose.orientation.w)
 	);
 }
-/*
- * функция обработчик таймера
- * параметр функции - структура, описывающая событие таймера, здесь не используется
- */
+
 void timerCallback()
 {  
 	static int counter = 0;
@@ -53,31 +53,23 @@ void timerCallback()
 	RCLCPP_DEBUG(node->get_logger(), "on timer %d", counter);
 	geometry_msgs::msg::Twist cmd;
 
-    if (!obstacle)
-	{
-        if (counter % 30 > 15)
-		{
-			RCLCPP_INFO(node->get_logger(), "go left");
-			cmd.linear.x = 0.5;
-			cmd.angular.z = 0.5;
-		}
-		else
-		{
-			RCLCPP_INFO(node->get_logger(), "go right");
-			cmd.linear.x = 0.5;
-			cmd.angular.z = -0.5;
-		}
+    if (!obstacle) {
+		RCLCPP_INFO(node->get_logger(), "go forward");
+		cmd.linear.x = 0.5;
+		cmd.angular.z = 0;
+	} else {
+		RCLCPP_INFO(node->get_logger(), "go right");
+		cmd.linear.x = 0;
+		cmd.angular.z = -0.5;
 	}
-	//отправляем (публикуем) команду
+
 	pub->publish(cmd);
 }
 
 int main(int argc, char **argv)
 {
-
 	rclcpp::init(argc, argv);
 	node = std::make_shared<rclcpp::Node>("control_node");
-
 
 	auto laser_sub = node->create_subscription<sensor_msgs::msg::LaserScan>(
 		"base_scan", 10,
@@ -90,8 +82,8 @@ int main(int argc, char **argv)
 	auto timer = node->create_wall_timer(100ms, timerCallback);
 	pub = node->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
 
-  rclcpp::spin(node);
-  rclcpp::shutdown();
+	rclcpp::spin(node);
+	rclcpp::shutdown();
 
-  return 0;
+	return 0;
 }

@@ -25,8 +25,17 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(robot_control src/robot_control.cpp)
-ament_target_dependencies(robot_control
+add_executable(alg1 src/alg1.cpp)
+ament_target_dependencies(alg1
+  rclcpp
+  std_msgs
+  sensor_msgs
+  nav_msgs
+  geometry_msgs
+)
+
+add_executable(alg2 src/alg2.cpp)
+ament_target_dependencies(alg2
   rclcpp
   std_msgs
   sensor_msgs
@@ -35,7 +44,11 @@ ament_target_dependencies(robot_control
 )
 
 install(TARGETS
-  robot_control
+  alg1
+  DESTINATION lib/${PROJECT_NAME})
+
+install(TARGETS
+  alg2
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
