@@ -20,11 +20,13 @@ LineControl::LineControl()
     min_obstacle_range = this->declare_parameter("min_obstacle_range", 1.0);
     double dt = this->declare_parameter("dt", 0.1);
 
+	cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+    err_pub = this->create_publisher<std_msgs::msg::Float64> ("/err", 10);
+
     laser_sub = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan", 10, std::bind(&LineControl::laserCallback, this, _1));
     pose_sub = this->create_subscription<nav_msgs::msg::Odometry>("/odom", 10, std::bind(&LineControl::poseCallback, this, _1));
-    timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&LineControl::timerCallback, this));
-    cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
-    err_pub = this->create_publisher<std_msgs::msg::Float64> ("/err", 10);
+
+	timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&LineControl::timerCallback, this));
 }
 
 double LineControl::cross_track_err_line()

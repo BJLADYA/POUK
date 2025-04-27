@@ -1,0 +1,5 @@
+control_selector_node:
+  ros__parameters:
+    min_range: 1.0
+    max_vel: 0.5
+    max_omega: 0.5

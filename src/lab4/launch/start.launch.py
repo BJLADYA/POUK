@@ -8,23 +8,17 @@ from launch_ros.actions import Node
 import os
 
 def generate_launch_description(): 
-    # Параметры для ноды line_control
-    line_control_params = {
-        'figure': "circle",
-        'task_vel': 0.5,
-        'prop_factor': 1.0,
-        'int_factor': 0.0,
-        'diff_factor': 0.0,
-        'min_obstacle_range': 1.5,
-        'cx': 0,
-        'cy': 0,
-        'R': 6
-    }
-
     # Параметры для stage
+    selector_control_params = os.path.join(
+        get_package_share_directory('lab4'),
+        'config',
+        'selector_params.yaml'
+	)
+
     use_sim_time = LaunchConfiguration('use_sim_time',  default='true')
-    this_directory = get_package_share_directory('stage_ros2')
-    launch_dir = os.path.join(this_directory, 'launch')
+    launch_dir = os.path.join(
+        get_package_share_directory('stage_ros2'), 
+        'launch')
 
     enforce_prefixes = LaunchConfiguration('enforce_prefixes')
     enforce_prefixes_cmd = DeclareLaunchArgument(
@@ -53,18 +47,18 @@ def generate_launch_description():
 
     world = LaunchConfiguration('world')
     declare_world = DeclareLaunchArgument(
-        'world', default_value='empty',
+        'world', default_value='cave',
         description='world to load in stage and rviz config [cave, example]')
 
     return LaunchDescription([
         # Нода управления линией
         Node(
-            package='lab3',
-            executable='line_control_node',
+            package='lab4',
+            executable='control_selector_node',
             name='control',
             output='screen',
             remappings=[('scan', 'base_scan')],
-            parameters=[line_control_params]
+            parameters=[selector_control_params]
         ),
         
         declare_namespace_cmd,
@@ -77,5 +71,7 @@ def generate_launch_description():
             condition=IfCondition(stage),
             launch_arguments={'one_tf_tree':one_tf_tree,
                               'enforce_prefixes':enforce_prefixes,
-                              'world': world}.items())
+                              'world': world,
+                              'use_sim_time': use_sim_time}.items()
+        )
     ])
