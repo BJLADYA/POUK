@@ -8,12 +8,19 @@ from launch_ros.actions import Node
 import os
 
 def generate_launch_description(): 
+    
     selector_control_params = os.path.join(
-        get_package_share_directory('lab4'),
-        'config',
-        'selector_params.yaml'
-	)
+    	get_package_share_directory('lab4'),
+    	'config',
+    	'selector_params.yaml'
+    )
 
+    mapper_params = os.path.join(
+    	get_package_share_directory('lab5'),
+    	'config',
+    	'mapper_params.yaml'
+    )
+	
 	# Параметры для stage
     use_sim_time = LaunchConfiguration('use_sim_time',  default='true')
     launch_dir = os.path.join(
@@ -49,6 +56,8 @@ def generate_launch_description():
     declare_world = DeclareLaunchArgument(
         'world', default_value='cave',
         description='world to load in stage and rviz config [cave, example]')
+    
+	
 
     return LaunchDescription([
         # Нода управления линией
@@ -57,8 +66,25 @@ def generate_launch_description():
             executable='control_selector_node',
             name='control',
             output='screen',
-            remappings=[('scan', 'base_scan')],
+            #remappings=[('scan', 'base_scan')],
             parameters=[selector_control_params]
+        ),
+        
+		Node(
+            package='lab5',
+            executable='simple_map_node',
+            name='mapper',
+            output='screen',
+            #remappings=[('scan', 'base_scan')],
+            parameters=[mapper_params]
+		),
+        
+		Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', get_package_share_directory('lab5') + '/config/config.rviz'],
+            output='screen'
         ),
         
         declare_namespace_cmd,

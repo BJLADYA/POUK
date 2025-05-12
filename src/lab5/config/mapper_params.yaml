@@ -1,0 +1,6 @@
+mapper_node:
+  ros__parameters:
+    map_frame: "odom"
+    map_resolution: 0.1
+    map_width: 100
+    map_height: 100

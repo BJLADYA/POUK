@@ -19,7 +19,7 @@ ControlSelector::ControlSelector()
 	);
 
 	laser_sub = this->create_subscription<sensor_msgs::msg::LaserScan>(
-		"/scan",
+		"/base_scan",
 		10,
 		[this](const sensor_msgs::msg::LaserScan msg) {
 			this->laserCallback(msg);
