@@ -45,10 +45,12 @@ ament_target_dependencies(alg2
 
 install(TARGETS
   alg1
-  DESTINATION lib/${PROJECT_NAME})
-
-install(TARGETS
   alg2
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY
+	launch
+	DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()

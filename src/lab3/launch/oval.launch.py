@@ -10,13 +10,16 @@ import os
 def generate_launch_description(): 
     # Параметры для ноды line_control
     line_control_params = {
-        'figure': "line",
+        'figure': "oval",
         'task_vel': 0.5,
-        'prop_factor': 1.0,
+        'prop_factor': 0.0,
         'int_factor': 0.0,
         'diff_factor': 0.0,
         'min_obstacle_range': 1.5,
-        'line_y': -6.0
+        'cx': 3,
+        'cy': 0,
+        'R': 6,
+        'line_y': 6.0
     }
 
     # Параметры для stage

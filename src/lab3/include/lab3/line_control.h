@@ -16,10 +16,10 @@ public:
 // секция приватных функций
 private:
     //функция вычисления ошибки управления для движения вдоль прямой
-    double cross_track_err_line();
+    double cross_track_err_line(double seted_y);
 
     //функция вычисления ошибки управления для движения вдоль окружности
-    double cross_track_err_circle();
+    double cross_track_err_circle(double seted_cx, double seted_cy);
 
     //функция вычисления ошибки управления для движения вдоль овала
     double cross_track_err_oval();

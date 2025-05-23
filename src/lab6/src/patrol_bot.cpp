@@ -7,13 +7,15 @@ PatrolBot::PatrolBot() : Node("patrol_bot_node"), trace_queue_(-1), count_(0), d
 	point_sub_ = this->create_subscription<geometry_msgs::msg::PointStamped>(
 		"/clicked_point",
 		10,
-		[this](const geometry_msgs::msg::PointStamped &msg) {
+		[this](const geometry_msgs::msg::PointStamped &msg)
+		{
 			clickPointCallback(msg);
 		});
 
 	timer_ = this->create_wall_timer(
 		std::chrono::milliseconds(100),
-		[this](){
+		[this]()
+		{
 			controlLoop();
 		});
 
@@ -32,7 +34,8 @@ PatrolBot::PatrolBot() : Node("patrol_bot_node"), trace_queue_(-1), count_(0), d
 
 void PatrolBot::clickPointCallback(const geometry_msgs::msg::PointStamped &msg)
 {
-	if (count_ >= 5) return;
+	if (count_ >= 5)
+		return;
 	count_++;
 	RCLCPP_INFO(this->get_logger(), "Received clicked point: x=%.2f, y=%.2f", msg.point.x, msg.point.y);
 
@@ -74,38 +77,44 @@ void PatrolBot::SendGoal()
 
 	auto send_goal_options = rclcpp_action::Client<NavigateToPose>::SendGoalOptions();
 	send_goal_options.goal_response_callback =
-		[this](const rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr & goal_handle) {
-			if (!goal_handle) {
-				RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
-			} else {
-				RCLCPP_INFO(this->get_logger(), "Goal accepted by server, waiting for result");
-			}
-		};
+		[this](const rclcpp_action::ClientGoalHandle<NavigateToPose>::SharedPtr &goal_handle)
+	{
+		if (!goal_handle)
+		{
+			RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
+		}
+		else
+		{
+			RCLCPP_INFO(this->get_logger(), "Goal accepted by server, waiting for result");
+		}
+	};
 
 	send_goal_options.feedback_callback =
 		[](GoalHandleNavigateToPose::SharedPtr, const std::shared_ptr<const NavigateToPose::Feedback> feedback)
-		{
-			// RCLCPP_INFO(rclcpp::get_logger("control_node"), "Current position x = %.2f", feedback->current_pose.pose.position.x);
-		};
+	{
+		// RCLCPP_INFO(rclcpp::get_logger("control_node"), "Current position x = %.2f", feedback->current_pose.pose.position.x);
+	};
 
 	send_goal_options.result_callback =
-		[this](const rclcpp_action::ClientGoalHandle<NavigateToPose>::WrappedResult & result) {
-			switch (result.code) {
-				case rclcpp_action::ResultCode::SUCCEEDED:
-					RCLCPP_INFO(this->get_logger(), "Goal reached!");
-					break;
-				case rclcpp_action::ResultCode::ABORTED:
-					RCLCPP_ERROR(this->get_logger(), "Goal was aborted");
-					break;
-				case rclcpp_action::ResultCode::CANCELED:
-					RCLCPP_ERROR(this->get_logger(), "Goal was canceled");
-					break;
-				default:
-					RCLCPP_ERROR(this->get_logger(), "Unknown result code");
-					break;
-			}
-			done_ = true;
-		};
+		[this](const rclcpp_action::ClientGoalHandle<NavigateToPose>::WrappedResult &result)
+	{
+		switch (result.code)
+		{
+		case rclcpp_action::ResultCode::SUCCEEDED:
+			RCLCPP_INFO(this->get_logger(), "Goal reached!");
+			break;
+		case rclcpp_action::ResultCode::ABORTED:
+			RCLCPP_ERROR(this->get_logger(), "Goal was aborted");
+			break;
+		case rclcpp_action::ResultCode::CANCELED:
+			RCLCPP_ERROR(this->get_logger(), "Goal was canceled");
+			break;
+		default:
+			RCLCPP_ERROR(this->get_logger(), "Unknown result code");
+			break;
+		}
+		done_ = true;
+	};
 
 	action_client_->async_send_goal(goal_msg, send_goal_options);
 }

@@ -12,9 +12,9 @@ def generate_launch_description():
     line_control_params = {
         'figure': "circle",
         'task_vel': 0.5,
-        'prop_factor': 1.0,
-        'int_factor': 0.0,
-        'diff_factor': 0.0,
+        'prop_factor': 1.1,
+        'int_factor': 0.01,
+        'diff_factor': 8.0,
         'min_obstacle_range': 1.5,
         'cx': 0,
         'cy': 0,

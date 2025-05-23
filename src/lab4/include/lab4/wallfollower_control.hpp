@@ -8,6 +8,7 @@ class WallfollowerControl final : public Control
 {
 private:
 	bool obstacle;
+    double right_distance;
 	double wall_offset;
 	rclcpp::Logger logger_;
 

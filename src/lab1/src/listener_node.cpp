@@ -11,7 +11,14 @@ class Listener : public rclcpp::Node
 public:
   Listener() : Node("listener")
   {
-    subscription_ = this->create_subscription<std_msgs::msg::String>("chat", 10, std::bind(&Listener::topic_callback, this, _1));
+    subscription_ = this->create_subscription<std_msgs::msg::String>(
+		"chat", 
+		10, 
+		[this](const std_msgs::msg::String & msg)
+		{
+			topic_callback(msg);
+		});
+		
     pub_ = this->create_publisher<std_msgs::msg::String>("reply", 10);
   }
 

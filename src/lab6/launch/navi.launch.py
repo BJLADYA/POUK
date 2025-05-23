@@ -13,7 +13,7 @@ def generate_launch_description():
         
         # Запуск симулятора
         IncludeLaunchDescription(
-            PathJoinSubstitution([FindPackageShare('stage_ros2'), 'launch', 'task1.launch.py'])
+            PathJoinSubstitution([FindPackageShare('stage_ros2'), 'launch', 'stage.launch.py'])
         ),
         
         # Параметр use_sim_time
